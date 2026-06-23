@@ -135,7 +135,7 @@ async function main(message){
 			if (splitMessage[0].toLowerCase() === "dng") 
 			{
 				dng = !dng;
-				embed = new MessageEmbed().setDescription(`OH SHIT`).setColor('GREEN');
+				embed = new MessageEmbed().setDescription(`OH NO`).setColor('GREEN');
 				message.channel.send({embeds : [embed]});
 				return;
 			}
@@ -166,25 +166,6 @@ async function main(message){
 			}
 	}
 
-	//for gasser (for future me this is a joke i should remove this)
-	{
-		if(splitMessage[0].toLowerCase() == "gasser")
-		{
-			   role = message.member.guild.roles.cache.find(role => role.name === splitMessage[1]);
-			   member = message.member
-			  if (!role) {
-				embed = new MessageEmbed().setDescription(`your role doesnt exist`).setColor('RED')
-				message.channel.send({embeds : [embed]});
-				return
-			  }
-				embed = new MessageEmbed().setDescription(`added class ${role} to viable classes`).setColor('GREEN')
-				message.channel.send({embeds : [embed]});
-				res.classes.push(splitMessage[1])
-				await res.save();
-				return
-			
-		}
-	}
 	//prefix
 	{
 		if (splitMessage[0].toLowerCase() == "prefix") 
@@ -415,7 +396,7 @@ async function main(message){
 			}
 			else
 			{
-				embed = new MessageEmbed().setDescription(`no fuck u no using command`).setColor('WHITE');
+				embed = new MessageEmbed().setDescription(`no , Stop using command`).setColor('WHITE');
 				message.channel.send({embeds : [embed]});
 				return;
 			
